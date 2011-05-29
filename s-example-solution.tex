@@ -1,0 +1,68 @@
+\newcommand{\bndry}{\textcolor{red}{\ensuremath{\cdot}}}
+\begin{frame}<handout:0>
+\frametitle{Segmentation puzzle: a solution}
+\begin{columns}[t]
+\begin{column}{0.5\textwidth}
+\resizebox{0.65\textwidth}{!}{
+\begin{minipage}{0.5\textwidth}
+\texttt{\small
+kitty\bndry{}thatsright\bndry{}kitty\\
+kitty\bndry{}sayitagainlove\bndry{}kitty\\
+what\bndry{}sthat\\
+kitty\\
+do\bndry{}youwantmoremilkhoney\\
+kitty\bndry{}kitty\bndry{}doggie\\
+nomi\bndry{}what\bndry{}does\bndry{}akitty\bndry{}say\\
+what\bndry{}does\bndry{}akitty\bndry{}say\\
+do\bndry{}ggie\bndry{}dog\\
+}
+\end{minipage}
+}
+\end{column}
+\begin{column}{0.5\textwidth}
+\resizebox{0.65\textwidth}{!}{
+\begin{minipage}{0.5\textwidth}
+\texttt{\small
+do\bndry{}ggie\\
+nomi\bndry{}what\bndry{}does\bndry{}thedoggie\bndry{}say\\
+what\bndry{}does\bndry{}the\bndry{}doggie\bndry{}say\\
+little\bndry{}babybirdie\\
+babybirdie\\
+youdontlikethatone\\
+okaymommytakethisout\\
+cow\\
+thecowsaysmoomoo\\
+what\bndry{}does\bndry{}the\bndry{}cowsaynomi\\
+}
+\end{minipage}
+}
+\end{column}
+\end{columns}
+The boundaries are inserted using the method suggested by Harris 
+(where successor or predecessor values peak).
+\end{frame}
+
+%
+%~/papers/lsv/src$ ./lsv --segm=sp,pp:or /tmp/aa
+%segm: 0x2000c
+%Segmenting `/tmp/aa'.
+%Reading statistics from previously saved file... done
+%nomi whatdoes akitty say
+%what does the doggie say
+%what sthat
+%do youwantmoremilkhoney
+%do ggie
+%okaymommytakethisout
+%little babybirdie
+%babybirdie
+%kitty sayitagainlove kitty
+%do ggie dog
+%kitty kitty doggie
+%kitty thatsright kitty
+%nomi whatdoes thedoggie say
+%what does the cowsaynomi
+%youdontlikethatone
+%cow
+%kitty
+%what does akitty say
+%thecowsaysmoomoo

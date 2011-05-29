@@ -1,0 +1,46 @@
+\usepackage{totcount}
+
+\let\sv@appendix\appendix
+\newif\ifmain\maintrue
+\def\appendix{\sv@appendix\mainfalse}
+
+\newcommand{\dgr}[1]{{\textcolor{darkgray}{#1}} }
+\newcommand{\gr}[1]{{\textcolor{gray}{#1}} }
+
+\newcommand{\supers}[1]{\ensuremath{^\textrm{#1}}}
+\newcommand{\subs}[1]{\ensuremath{_\textrm{#1}}}
+
+% get rid of the numbering in footnotes
+\renewcommand{\thefootnote}{}
+% and the footnote separating rule
+\renewcommand{\footnoterule}{}
+
+% this may apparently make natbib/beamer work together
+%\newcommand*{\newblock}{}
+
+\setbeamertemplate{navigation symbols}{}
+\newcounter{slidenum}
+\regtotcounter{slidenum}
+\newtotcounter{slidenummain}
+\newtotcounter{slidenumall}
+
+\newcommand{\includeslidex}[1]{\addtocounter{slidenumall}{1}\ifmain\addtocounter{slidenummain}{1}\fi\input {#1.tex}}
+
+
+\setbeamercolor{graybox}{fg=black,bg=lightgray!70!white}
+\setbeamercolor{whitebox}{fg=black,bg=lightgray!50!white}
+\setbeamertemplate{footline}
+{%
+ \leavevmode%
+  \begin{beamercolorbox}[ht=2ex,wd=0.3333\paperwidth]{whitebox}{~\insertshortauthor}\end{beamercolorbox}%
+  \begin{beamercolorbox}[ht=2ex,wd=0.3333\paperwidth,center]{graybox}{\emph{\insertshorttitle}}\end{beamercolorbox}%
+  \begin{beamercolorbox}[ht=2ex,wd=0.3333\paperwidth]{whitebox}{\emph{{\hfill\arabic{slidenumall}/\total{slidenummain}~~~~}}}\end{beamercolorbox}
+}
+
+\setbeamertemplate{headline}
+{%
+ \leavevmode%
+  \begin{beamercolorbox}[ht=2ex,wd=\paperwidth,right]{graybox}{\emph{\insertsection}~~}%
+  \end{beamercolorbox}%
+}
+

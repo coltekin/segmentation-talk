@@ -1,0 +1,13 @@
+* intro: what needs to be done for language acquistion
+* motivation: why do computational modeling?
+* segmentation: the problem 
+* what do we know about human segmentation?
+* cues
+* example segmentation: display of cues
+* the norm: language modeling or MDL
+* predictabilty: harris' method
+* predictability: other masures
+* how to do it? peaks in unpredictability
+* how well can we segment using predictabilty?
+* the example segmentation: mystery revealed.
+* conclusions and more
