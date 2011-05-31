@@ -1,32 +1,41 @@
 \begin{frame}
-\frametitle{Distributional regularities}
+\frametitle{Predictability}
 
 \textcolor{blue}{\emph{\small
-Predictability within units is high, predictability between 
-units is low.}}
-\vspace{2mm}
+Predictability within units is high, predictability between units is low.}}
+\vspace{1mm}
 
-\uncover<2->{An old method using distributional regularities is suggested by 
-(Haris, 1955): \emph{\small The morpheme boundaries are at the locations where
-there is a high variety of possible phonemes that follow the segment.}
-}\vspace{2mm}
+Given a sequence \xL{}\xR{}, where \xL{} and \xR{} are sequences of
+phonemes:
+\begin{itemize}
+\item If \xL{} help us predict \xR, \xL\xR{} is likely to be part of a word.
+\item If observing \xR{} after \xL{} is surprising it is likley that
+there is a boundary between \xL{} and \xR{}.
+\end{itemize}
+
+\vspace{2mm}
+\uncover<2->{An old method based on predictability, called
+\emph{successor variety} (SV), is suggested by Haris (1955): 
+
+\vspace{1mm}\emph{\small The morpheme boundaries are at the locations
+where there is a high variety of possible phonemes that follow the
+initial segment.} }\vspace{2mm}
 
 \begin{columns}[t]
 \begin{column}{0.45\textwidth}
-\uncover<2->{\textcolor{blue}{read-}}\uncover<3->{\{a,e,i,j,o,s,y,-,',\$\} (\textcolor{red}{10})\\
-\uncover<3->{
+\uncover<3->{\textcolor{blue}{read-}}\uncover<4->{\{a,e,i,j,o,s,y,-,',\$\} (\textcolor{red}{10})\\
+\uncover<4->{
 read\\
 reads\\
 reading\\
-reader\\
 readjusted\\
 ...\\
 }}
 \end{column}
 
 \begin{column}{0.45\textwidth}
-\uncover<2->{\textcolor{blue}{readi-}}\uncover<3->{\{e, l, n\} (\textcolor{red}{3})\\
-\uncover<3->{
+\uncover<3->{\textcolor{blue}{readi-}}\uncover<4->{\{e, l, n\} (\textcolor{red}{3})\\
+\uncover<4->{
 reading\\
 readied\\
 readily\\
@@ -34,8 +43,5 @@ readily\\
 \end{column}
 \end{columns}
 \vspace{2mm}
-
-\uncover<4->{\small There are a number of ways to formalize the concept:
-including conditional probability, entropy, mutual information...}
 
 \end{frame}

@@ -1,0 +1,51 @@
+\begin{frame}
+\frametitle{Measures of (un)predictability}
+%As an indication of a boundary betwen an initial sequence \xL, the
+%sequence \xR, as well as successor variety we can use,
+\begin{columns}[t]
+\begin{column}{0.5\textwidth}
+\begin{itemize}
+\item Transitional probability
+  \begin{equation*}
+    \text{TP}(\xL,\xR) 
+%                   = P(\xR|\xL) 
+                   = \frac{P(\xL\xR)}{P(\xL)} 
+%             \approx \frac{frequency(\xL\xR)}{frequency(\xL)}
+  \end{equation*}
+\item Pointwise mutual information
+\begin{equation*}
+    \textrm{MI}(\xL,\xR) = log_2 \frac{P(\xL\xR)}{P(\xL) P(\xR)}
+\end{equation*}
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{itemize}
+\item Successor value
+\begin{equation*}
+\textrm{SV}(\xL) = \sum_{\xR\in A} c(\xL,\xR)
+\end{equation*}
+%where,
+%\begin{equation*}
+%c(\xL,\xR)=\begin{cases}%
+%1 & \text{if substring \xL\xR occurs in the corpus}\\
+%0 & \text{otherwise}\\
+%\end{cases}
+%\end{equation*}
+\item Boundary entropy
+\begin{equation*}\hspace{-10mm}
+    \textrm{H}(\xL) = -\sum_{\xR\in A}
+          P(\xR|\xL) \; log_2 P\left(\xR|\xL\right)
+  \end{equation*}
+\end{itemize}
+\end{column}
+\end{columns}
+
+\vspace{2mm}\begin{beamercolorbox}[sep=0.2em,rounded=true]{whitebox}
+\centering All these measures are related, but they are not the same.
+\end{beamercolorbox}
+\vspace{2mm}\begin{beamercolorbox}[sep=0.2em,rounded=true]{whitebox}
+\centering This list is not exclusive, there are other measures of
+(un)predictability.
+\end{beamercolorbox}
+
+\end{frame}

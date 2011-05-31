@@ -1,0 +1,18 @@
+\begin{frame}
+\frametitle{Putting all together}
+
+\begin{algorithm}[H]
+\ForEach{utterance}{
+    \ForEach{phoneme position in the utterance}{
+        Get the majority vote of all measures calculated using context
+        sizes one to four\;
+        \If{majority vote is positive}{
+            insert a boundary\;
+        }
+    }
+    output the segmented utterance \;
+}
+\caption{A simple algorithm using multiple measures}
+\end{algorithm}
+
+\end{frame}

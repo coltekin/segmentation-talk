@@ -1,0 +1,51 @@
+
+\begin{frame}
+
+\frametitle{How to Calculate the Measures}
+
+\begin{tikzpicture}\hspace{-5mm}
+%\pgfsetcornersarced{\pgfpoint{3mm}{3mm}}
+\path (0,0) rectangle (11.5,8.5);
+\draw (0,  6) node[anchor=base] {\texttt{\#}};
+\draw (1,  6) node[anchor=base] {\texttt{I}};
+\draw (2,  6) node[anchor=base] {\texttt{z}};
+\draw (3,  6) node[anchor=base] {\texttt{D}};
+\draw (4,  6) node[anchor=base] {\texttt{\&}};
+\draw (5,  6) node[anchor=base] {\texttt{t}};
+\draw (6,  6) node[anchor=base] {\texttt{6}};
+\draw (7,  6) node[anchor=base] {\texttt{k}};
+\draw (8,  6) node[anchor=base] {\texttt{I}};
+\draw (9,  6) node[anchor=base] {\texttt{t}};
+\draw (10, 6) node[anchor=base] {\texttt{i}};
+\draw (11, 6) node[anchor=base] {\texttt{\#}};
+
+\windowat{2}{1.5}{0.40}{\texttt{\#I}}{\texttt{z}}
+\windowat{3}{2.5}{0.22}{\texttt{Iz}}{\texttt{D}}
+\windowat{4}{3.5}{0.46}{\texttt{zD}}{\texttt{\&}}
+\windowat{5}{4.5}{0.99}{\texttt{D\&}}{\texttt{t}}
+\windowat{6}{5.5}{0.03}{\texttt{\&t}}{\texttt{6}}
+\windowat{7}{6.5}{0.04}{\texttt{t6}}{\texttt{k}}
+\windowat{8}{7.5}{0.30}{\texttt{6k}}{\texttt{I}}
+\windowat{9}{8.5}{0.48}{\texttt{kI}}{\texttt{t}}
+\windowat{10}{9.5}{0.10}{\texttt{It}}{\texttt{i}}
+
+\visible<10->{
+\draw (5, 1) node {Calculations are done on a corpus of child-directed English};
+}
+\end{tikzpicture}
+
+%
+%<<I,0.048212
+%<Iz,0.402542
+%IzD,0.216484
+%zD&,0.460722
+%D&t,0.996669
+%&t6,0.031375
+%t6k,0.049057
+%6kI,0.302439
+%kIt,0.475083
+%Iti,0.106729
+%ti>,0.524038
+%
+
+\end{frame}

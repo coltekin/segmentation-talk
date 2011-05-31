@@ -1,44 +1,76 @@
-\section{Segmentation}
 \begin{frame}
-\frametitle{Segmentation: back to the puzzle}
+\frametitle{back to the puzzle}
 
 \begin{columns}[t]
 \begin{column}{0.5\textwidth}
 
+\only<-6>{
 \resizebox{!}{0.45\textheight}{
-\begin{minipage}{0.5\textwidth}
-\texttt{\small
-ljuuzuibutsjhiuljuuz\\     %kittythatsrightkitty
-ljuuztbzjubhbjompwfljuuz\\ %kittysayitagainlovekitty
-xibutuibu\\                %whatsthat
-ljuuz\\                    %kitty
+\begin{minipage}{0.5\textwidth}%
+\vspace{-3mm}\texttt{\small
+\clrat{3}{blue}{ljuuz}\clrat{6}{blue}{uibu}tsjhiu\clrat{3}{blue}{ljuuz}\\     %kittythatsrightkitty
+\clrat{3}{blue}{ljuuz}t\clrat{5}{red}{bz}jubhbjompwf\clrat{3}{blue}{ljuuz}\\ %kittysayitagainlovekitty
+xibut\clrat{6}{blue}{uibu}\\                %whatsthat
+\clrat{3}{blue}{ljuuz}\\                    %kitty
 epzpvxbounpsfnjmlipofz\\   %doyouwantmoremilkhoney
-ljuuzljuuzephhjf\\         %kittykittydoggie
-opnjxibuepftbljuuztbz\\    %nomiwhatdoesakittysay
-xibuepftbljuuztbz\\        %whatdoesakittysay
+\clrat{3}{blue}{ljuuz}\clrat{3}{blue}{ljuuz}ephhjf\\         %kittykittydoggie
+opnjxibuepftb\clrat{3}{blue}{ljuuz}t\clrat{5}{blue}{bz}\\    %nomiwhatdoesakittysay
+xibuepftb\clrat{3}{blue}{ljuuz}t\clrat{5}{blue}{bz}\\        %whatdoesakittysay
 ephhjfeph\\                %doggiedog
 ephhjf\\                   %doggie
-opnjxibuepftuifephhjftbz\\ %nomiwhatdoesthedoggiesay
-xibuepftuifephhjftbz\\     %whatdoesthedoggiesay
+opnjxibuepftuifephhjft\clrat{5}{blue}{bz}\\ %nomiwhatdoesthedoggiesay
+xibuepftuifephhjft\clrat{5}{blue}{bz}\\     %whatdoesthedoggiesay
 mjuumfcbczcjsejf\\         %littlebabybirdie
 cbczcjsejf\\               %babybirdie
-zpvepoumjlfuibupof\\       %youdontlikethatone
-plbznpnnzublfuijtpvu\\     %okaymommytakethisout
+zpvepoumjlf\clrat{6}{blue}{uibu}pof\\       %youdontlikethatone
+pl\clrat{5}{red}{bz}npnnzublfuijtpvu\\     %okaymommytakethisout
 dpx\\                      %cow
-uifdpxtbztnppnpp\\         %thecowsaysmoomoo
-xibuepftuifdpxtbzopnj\\    %whatdoesthecowsaynomi
+uifdpxt\clrat{5}{red}{bz}tnppnpp\\         %thecowsaysmoomoo
+xibuepftuifdpxt\clrat{5}{red}{bz}opnj\\    %whatdoesthecowsaynomi
 }
 \end{minipage}
 }
-
+}
+\only<7->{
+\resizebox{!}{0.45\textheight}{
+\begin{minipage}{0.5\textwidth}%
+\vspace{-3mm}\texttt{\small
+l\Bl{ju}u\Rd{zu}ibuts\bl{jh}iul\Bl{ju}u\rd{z}\\     %kittythatsrightkitty
+l\Bl{ju}u\rd{zt}b\rd{z}\Bl{ju}bhb\bl{jo}mpwfl\Bl{ju}u\rd{z}\\ %kittysayitagainlovekitty
+xibutuibu\\                %whatsthat
+l\Bl{ju}u\rd{z}\\                    %kitty
+ep\rd{zp}vxbounpsfn\bl{jm}lipof\rd{z}\\   %doyouwantmoremilkhoney
+l\Bl{ju}u\rd{zl}\Bl{ju}u\rd{ze}phh\bl{jf}\\         %kittykittydoggie
+opn\bl{jx}ibuepftbl\Bl{ju}u\rd{zt}b\rd{z}\\    %nomiwhatdoesakittysay
+xibuepftbl\Bl{ju}u\rd{zt}b\rd{z}\\        %whatdoesakittysay
+ephh\bl{jf}eph\\                %doggiedog
+ephh\bl{jf}\\                   %doggie
+opn\bl{jx}ibuepftuifephh\bl{jf}tb\rd{z}\\ %nomiwhatdoesthedoggiesay
+xibuepftuifephh\bl{jf}tb\rd{z}\\     %whatdoesthedoggiesay
+m\Bl{ju}umfcbc\rd{zc}\bl{js}e\bl{jf}\\         %littlebabybirdie
+cbc\rd{zc}\bl{js}e\bl{jf}\\               %babybirdie
+\rd{zp}vepoum\bl{jl}fuibupof\\       %youdontlikethatone
+plb\rd{zn}pnn\Rd{zu}blfui\bl{jt}pvu\\     %okaymommytakethisout
+dpx\\                      %cow
+uifdpxtb\rd{zt}nppnpp\\         %thecowsaysmoomoo
+xibuepftuifdpxtb\rd{zo}pn\bl{j}\\    %whatdoesthecowsaynomi
+}
+\end{minipage}
+}
+}
 \end{column}
 \begin{column}{0.5\textwidth}
 \only<2->{
-Children need to segment the input. Despite:
+Cues for the solution:
 \begin{itemize}
-\item no reliable indicators to boundaries,
-\item acoustic variation,
-\item noise.
+\item Acoustic cues, such as \emph{pauses}, \emph{stress},
+\emph{coarticulation}, \emph{allophonic alternations}, \emph{vowel harmony}
+\item<3-> lexical knowledge
+\item<4-> phonotactics
+\item<5-> utterance boundaries
+\item<6-> distributional regularities
+\item<7-> predictability\\
+\visible<8->{TP(\bl{ju}) = 11/27\\ TP(\rd{zu}) = 2/23}
 \end{itemize}
 }
 \end{column}

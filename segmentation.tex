@@ -1,0 +1,100 @@
+%_HANDOUT_\documentclass[handout]{beamer}
+\documentclass{beamer}      %_SLIDES_ONLY_%
+\usepackage[utf8]{inputenc}
+\usepackage{lingmacros}
+\usepackage{ccg,cem2e,cgmacros2e}
+\usepackage{multirow}
+\usepackage{qtree}
+\usepackage{fancybox}
+\usepackage{listings}
+\usepackage{url}
+\usepackage{xmpmulti}
+\usepackage{hyperref}
+\usepackage{totcount}
+\usepackage{tikz}
+\usepackage{calc}
+\usepackage{amsfonts}
+\usepackage{euler}
+\usepackage[vlined,ruled,slide,linesnumbered]{algorithm2e}
+\usepackage{cc-presentation}
+\usetikzlibrary{calc}
+%\usetikzlibrary{external}
+%\tikzexternalize
+
+%_HANDOUT_\usepackage{handoutWithNotes}
+%_HANDOUT_\pgfpagesuselayout{4 on 1 with notes}[a4paper,border shrink=5mm]
+
+\newcommand{\mywebpage}{http://www.let.rug.nl/coltekin}
+\newcommand{\clcgwebpage}{http://www.rug.nl/let/onderzoek/onderzoekinstituten/clcg/index}
+
+\author[\href{\mywebpage}{Ç. Çöltekin,~CLCG}]%
+{\href{\mywebpage}{Çağrı Çöltekin}\\ \vskip2mm\tiny\tt
+c.coltekin@rug.nl} \institute{\href{\clcgwebpage}{Center for Language
+and Cognition\\ University of Groningen}}
+\title[Segmentation]{Discovering Words in Continuous
+Speech\\\vspace{2mm}
+\small Computational Simulations of Speech Segmentation} 
+\date{June 2011}
+
+\begin{document}
+
+\begin{frame}[plain]
+\maketitle
+\end{frame}
+
+\mode<article>{
+This talk is about computational methods of segmentation of continuous
+speech into linguistically useful units, such as words. As competent
+users of a language we take segmentation as granted. However, in
+fluent speech, the word boundaries are not marked. We do not actually
+have a break after every word. This is probably one of the first
+difficulties of learning a foreign language. When you listen to a
+foreign language, you generally do not have any clue where the words
+start and end. And some languages are written without spaces, so
+segmentation is a step necessary for any further language processing
+tasks. In this talk we will concentrate on the first problem. The
+study behind this talk aims to gain some insights about how children
+learn to extract words from fluent speech.  However, the focus of this
+talk will be describing a particular computational strategy that can
+be useful for any other purpose.
+}
+
+\section{Introduction}
+\includeslidex{s-intro}
+\includeslidex{s-wreck-a-nice-beach}
+\includeslidex{s-cues-intro}
+\includeslidex{s-safran-etal}
+\includeslidex{s-intro-segmentation}
+\section{Predictability}
+\includeslidex{s-sv-intro}
+\includeslidex{s-measures-formula}
+\includeslidex{s-measures-rev-and-size}
+\includeslidex{s-sliding-window}
+\includeslidex{s-tp-graph}
+\includeslidex{s-mi-graph}
+\includeslidex{s-sv-graph}
+\includeslidex{s-h-graph}
+\includeslidex{s-peak}
+\includeslidex{s-combination}
+\section{Evaluation}
+\includeslidex{s-evaluation}
+\includeslidex{s-eval-boundary-word-lexical}
+\section{Recap}
+\includeslidex{s-recap}
+\includeslidex{s-algorithm}
+\section{Results}
+\includeslidex{s-results}
+\includeslidex{s-example-solution}
+\section{Summary}
+\includeslidex{s-conclusions}
+
+\appendix
+\section{Appendix}
+\includeslidexx{s-appendix-title}
+\includeslidex{s-computational-modeling}
+\includeslidex{s-computational-modeling2}
+%\includeslidex{s-example-colors}
+\includeslidex{s-measures-backwards}
+\includeslidex{s-segmentation-difficult}
+
+\end{document}

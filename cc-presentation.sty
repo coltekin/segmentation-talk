@@ -26,6 +26,7 @@
 
 \newcommand{\includeslidex}[1]{\addtocounter{slidenumall}{1}\ifmain\addtocounter{slidenummain}{1}\fi\input {#1.tex}}
 
+\newcommand{\includeslidexx}[1]{\input {#1.tex}}
 
 \setbeamercolor{graybox}{fg=black,bg=lightgray!70!white}
 \setbeamercolor{whitebox}{fg=black,bg=lightgray!50!white}
@@ -43,4 +44,60 @@
   \begin{beamercolorbox}[ht=2ex,wd=\paperwidth,right]{graybox}{\emph{\insertsection}~~}%
   \end{beamercolorbox}%
 }
+
+\newcounter{prev}
+\newcounter{next}
+
+\newcommand{\clrat}[3]{%
+    \setcounter{prev}{#1}%
+    \setcounter{next}{#1}%
+    \addtocounter{prev}{-1}%
+    \addtocounter{next}{1}%
+    \only<-\value{prev},\value{next}->{#3}\only<#1>{\textcolor{#2}{#3}}%
+}
+
+\newcommand{\bl}[1]{%
+    \textcolor{blue}{#1}%
+}
+\newcommand{\rd}[1]{%
+    \textcolor{red}{#1}%
+}
+
+\newcommand{\grn}[1]{%
+    \textcolor{green}{#1}%
+}
+
+\newcommand{\Bl}[1]{%
+    \textcolor{blue}{\underline{#1}}%
+}
+\newcommand{\Rd}[1]{%
+    \textcolor{red}{\underline{#1}}%
+}
+\newcommand{\windowat}[5]{%
+    \visible<#1>{
+    \draw ($(#2, 5.9) - (2, 0)$) rectangle ($(#2, 6.4) + (1,0)$);
+    \draw (#2,  5.9) rectangle ($(#2, 6.4) + (1,0)$);
+    \draw[thick] (#2,  5.7) -- (#2, 6.4);
+    \draw (5, 4) node {$TP(#4,#5) = P(#5|#4) = #3$};
+    }
+    \visible<#1->{\draw (#2, 5.5) node {\small #3};}
+
+}
+
+\newcommand{\xL}{\texttt{\bl{l}}}
+\newcommand{\xR}{\texttt{\bl{r}}}
+
+\newcommand{\downtriangle}[2]{
+    \filldraw[#2] ($#1 + (-0.15,  0.10)$) -- 
+                  ($#1 +  (0.00, -0.20)$) -- 
+                  ($#1 +  (0.15,  0.10)$) -- cycle;
+}
+
+\newcommand{\uptriangle}[2]{
+    \filldraw[#2] ($#1 + (-0.15, -0.10)$) -- 
+                  ($#1 +  (0.00,  0.20)$) -- 
+                  ($#1 +  (0.15, -0.10)$) -- cycle;
+}
+
+\newenvironment{framdsc}{0}{}{}
 

@@ -1,0 +1,35 @@
+
+\begin{frame}
+\frametitle{Reverse measures}
+The assymmetric measures also have `backwards' counterparts:
+
+\begin{itemize}
+\item Reverse transitional probability
+\begin{equation}\label{eq:seg-tp-rev}
+    \textrm{TP}_r(\xL,\xR) = P(\xL|\xR) 
+                   = \frac{P(\xL\xR)}{P(\xR)} 
+             \approx \frac{frequency(\xL\xR)}{frequency(\xR)}
+\end{equation}
+
+\item Reverse successor variety (predecessor variety)
+\begin{equation}\label{eq:seg-sv-rev}
+\textrm{SV}_r(\xR) = \sum_{\xL\in A} c(\xL,\xR)
+\end{equation}
+where,
+\begin{equation*}
+c(\xL,\xR)=\begin{cases}%
+1 & \text{if substring $\xL\xR$ occurs in the corpus}\\
+0 & \text{otherwise}\\
+\end{cases}
+\end{equation*}
+and $A$ is the set of phonemes (the alphabet).
+
+\item Reverse boundary entropy
+\begin{equation}\label{eq:seg-ent-rev}
+    \textrm{H}_r(\xR) = -\sum_{\xL\in A}
+          P(\xL|\xR) \: log_2 P(\xL|\xR)
+\end{equation}
+\end{itemize}
+
+
+\end{frame}

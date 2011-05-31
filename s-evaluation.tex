@@ -1,0 +1,23 @@
+\begin{frame}
+\frametitle{Evaluation}
+We evaluate the results agianst a linguistically motivated `gold
+standard'.
+
+\begin{itemize}
+\item True positives (TP), or hits, are the items that match with the
+gold standard.
+\item False positives (FP), or fals alarms, are the items that the
+procedure found, but do not exist in the gold standard.
+\item False negatives (FN), or misses, are the items that are in the
+gold standard that our procedure did not find.
+\end{itemize}
+
+\begin{equation*}
+\text{precision}=\frac{\textrm{TP}}{\textrm{TP} + \textrm{FP}}\quad\quad
+\text{recall}=\frac{\textrm{TP}}{\textrm{TP} + \textrm{FN}}
+\end{equation*}%
+\begin{equation*}
+\text{f-score} =2\times\frac{\text{precision}\times\text{recall}}{\text{precision}+\text{recall}}
+\end{equation*}
+
+\end{frame}

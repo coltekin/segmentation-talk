@@ -1,68 +1,258 @@
 \newcommand{\bndry}{\textcolor{red}{\ensuremath{\cdot}}}
 \begin{frame}<handout:0>
 \frametitle{Segmentation puzzle: a solution}
-\begin{columns}[t]
+\only<1-2>{\begin{columns}[t]
 \begin{column}{0.5\textwidth}
-\resizebox{0.65\textwidth}{!}{
-\begin{minipage}{0.5\textwidth}
-\texttt{\small
-kitty\bndry{}thatsright\bndry{}kitty\\
-kitty\bndry{}sayitagainlove\bndry{}kitty\\
-what\bndry{}sthat\\
-kitty\\
-do\bndry{}youwantmoremilkhoney\\
-kitty\bndry{}kitty\bndry{}doggie\\
-nomi\bndry{}what\bndry{}does\bndry{}akitty\bndry{}say\\
-what\bndry{}does\bndry{}akitty\bndry{}say\\
-do\bndry{}ggie\bndry{}dog\\
-}
-\end{minipage}
+{\tt\small
+ljuuz~uibut~sjhiu~ljuuz\\
+ljuuz~tbz~ju~bhbjo~mpwf~ljuuz\\
+xibut~uibu\\
+ljuuz\\
+ep~zpv~xbou~npsf~njml~ipofz\\
+ljuuz~ljuuz~ephhjf\\
+opnj~xibu~epft~b~ljuuz~tbz\\
+xibu~epft~b~ljuuz~tbz\\
+ephhjf~eph\\
+ephhjf\\
+opnj~xibu~epft~uif~ephhjf~tbz\\
+xibu~epft~uif~ephhjf~tbz\\
+mjuumf~cbcz~cjsejf\\
+cbcz~cjsejf\\
+zpv~epou~mjlf~uibu~pof\\
+plbz~npnnz~ublf~uijt~pvu\\
+dpx\\
+uif~dpx~tbzt~npp~npp\\
+xibu~epft~uif~dpx~tbz~opnj\\
 }
 \end{column}
 \begin{column}{0.5\textwidth}
-\resizebox{0.65\textwidth}{!}{
-\begin{minipage}{0.5\textwidth}
-\texttt{\small
-do\bndry{}ggie\\
-nomi\bndry{}what\bndry{}does\bndry{}thedoggie\bndry{}say\\
-what\bndry{}does\bndry{}the\bndry{}doggie\bndry{}say\\
-little\bndry{}babybirdie\\
-babybirdie\\
-youdontlikethatone\\
-okaymommytakethisout\\
-cow\\
-thecowsaysmoomoo\\
-what\bndry{}does\bndry{}the\bndry{}cowsaynomi\\
-}
-\end{minipage}
+\visible<2>{\tt\small
+ljuuz~uibu~tsjhiuljuuz\\
+ljuuz~tbz~jubhbjompwfljuuz\\
+xibu~tuibu\\
+ljuuz\\
+ep~zpvxbounpsfnjmli~pof~z\\
+ljuuz~ljuuz~ephhjf\\
+opnj~xibu~ep~ftb~ljuuz~tbz\\
+xibu~ep~ftb~ljuuz~tbz\\
+ephhjf~eph\\
+ephhjf\\
+opnj~xibu~epft~uif~ephhjf~tbz\\
+xibu~ep~ft~uif~ephhjf~tbz\\
+mjuumfcbczcjsejf\\
+cbczcjsejf\\
+zpv~epoumj~lf~uibu~pof\\
+plbznpnnzublfui~jtpvu\\
+dpx\\
+uif~dpx~tbz~tnppnpp\\
+xibu~epft~uif~dpx~tbz~opnj\\
+%ljuuz~uibutsjhiuljuuz\\
+%ljuuztbzjubhbjompwfljuuz\\
+%xibut~uibu\\
+%ljuuz\\
+%epzpvxbounpsfnjmlipofz\\
+%ljuuz~ljuuz~ephhjf\\
+%opnjxibu~epftb~ljuuz~tbz\\
+%xibu~epftb~ljuuz~tbz\\
+%ep~hhjf~eph\\
+%ephhjf\\
+%opnj~xibu~epft~ui~fephhjf~tb~z\\
+%xibu~epft~ui~fephhjf~tbz\\
+%mjuumfcbczcjse~jf\\
+%cbczcjse~jf\\
+%zpv~epoumjlf~uibu~pof\\
+%plbznpnnzublfui~jtpvu\\
+%dpx\\
+%uif~dpx~tbz~tnppnpp\\
+%xibu~epft~uif~dpx~tbz~opnj\\
 }
 \end{column}
 \end{columns}
-The boundaries are inserted using the method suggested by Harris 
-(where successor or predecessor values peak).
+}
+\only<3>{\begin{columns}[t]
+\begin{column}{0.5\textwidth}
+{\tt\small
+kitty~thats~right~kitty\\
+kitty~say~it~again~love~kitty\\
+whats~that\\
+kitty\\
+do~you~want~more~milk~honey\\
+kitty~kitty~doggie\\
+nomi~what~does~a~kitty~say\\
+what~does~a~kitty~say\\
+doggie~dog\\
+doggie\\
+nomi~what~does~the~doggie~say\\
+what~does~the~doggie~say\\
+little~baby~birdie\\
+baby~birdie\\
+you~dont~like~that~one\\
+okay~mommy~take~this~out\\
+cow\\
+the~cow~says~moo~moo\\
+what~does~the~cow~say~nomi\\
+}
+\end{column}
+\begin{column}{0.5\textwidth}
+{\tt\small
+kitty~that~srightkitty\\
+kitty~say~itagainlovekitty\\
+what~sthat\\
+kitty\\
+do~youwantmoremilkh~one~y\\
+kitty~kitty~doggie\\
+nomi~what~do~esa~kitty~say\\
+what~do~esa~kitty~say\\
+doggie~dog\\
+doggie\\
+nomi~what~does~the~doggie~say\\
+what~do~es~the~doggie~say\\
+littlebabybirdie\\
+babybirdie\\
+you~dontli~ke~that~one\\
+okaymommytaketh~isout\\
+cow\\
+the~cow~say~smoomoo\\
+what~does~the~cow~say~nomi\\
+}
+\end{column}
+\end{columns}
+}
 \end{frame}
 
-%
-%~/papers/lsv/src$ ./lsv --segm=sp,pp:or /tmp/aa
-%segm: 0x2000c
-%Segmenting `/tmp/aa'.
-%Reading statistics from previously saved file... done
-%nomi whatdoes akitty say
-%what does the doggie say
-%what sthat
-%do youwantmoremilkhoney
-%do ggie
-%okaymommytakethisout
-%little babybirdie
-%babybirdie
-%kitty sayitagainlove kitty
-%do ggie dog
-%kitty kitty doggie
-%kitty thatsright kitty
-%nomi whatdoes thedoggie say
-%what does the cowsaynomi
-%youdontlikethatone
-%cow
+
+%cagri@tablet:~/thesis/src/seg$ ./seg -m pred,none --combine=wmv --quiet --pred-xmin=1 --pred-xmax=3 --pred-m=mi,h,rh,tp,rtp,sv,rsv -i /tmp/childes-input --print-prf
+%0,19, 27,9,27,31,24,42,14,17,23, 0.750000,0.500000,0.600000,0.563636,0.424658,0.484375,0.451613,0.378378,0.411765
+%kitty thatsrightkitty
+%kittysayitagainlovekitty
+%whats that
 %kitty
-%what does akitty say
-%thecowsaysmoomoo
+%doyouwantmoremilkhoney
+%kitty kitty doggie
+%nomiwhat doesa kitty say
+%what doesa kitty say
+%do ggie dog
+%doggie
+%nomi what does th edoggie sa y
+%what does th edoggie say
+%littlebabybird ie
+%babybird ie
+%you dontlike that one
+%okaymommytaketh isout
+%cow
+%the cow say smoomoo
+%what does the cow say nomi
+
+%cagri@tablet:~/thesis/src/seg$ ./seg --prior-data=/tmp/childes-input -m pred,none --combine=wmv --quiet --pred-xmin=1 --pred-xmax=3 --pred-m=mi,h,rh,tp,rtp,sv,rsv -i /tmp/childes-input --print-prf
+%0,19, 32,11,22,39,23,34,13,14,24, 0.744186,0.592593,0.659794,0.629032,0.534247,0.577778,0.481481,0.351351,0.406250
+%kitty that srightkitty
+%kitty say itagainlovekitty
+%what sthat
+%kitty
+%do youwantmoremilkh one y
+%kitty kitty doggie
+%nomi what do esa kitty say
+%what do esa kitty say
+%doggie dog
+%doggie
+%nomi what does the doggie say
+%what do es the doggie say
+%littlebabybirdie
+%babybirdie
+%you dontli ke that one
+%okaymommytaketh isout
+%cow
+%the cow say smoomoo
+%what does the cow say nomi
+
+%cagri@tablet:~/thesis/src/seg$ ./seg --prior-data=/tmp/inp.2 -m
+%pred,none --combine=wmv --quiet --pred-xmin=1 --pred-xmax=3
+%--pred-m=mi,h,rh,tp,rtp,sv,rsv -i /tmp/inp.2 --print-prf
+%0,19, 0,43,0,5,57,14,5,22,14,
+%0.000000,-nan,-nan,0.080645,0.263158,0.123457,0.185185,0.263158,0.217391
+%ljuuz uibu tsjhiuljuuz
+%ljuuz tbz jubhbjompwfljuuz
+%xibu tuibu
+%ljuuz
+%ep zpvxbounpsfnjmli pof z
+%ljuuz ljuuz ephhjf
+%opnj xibu ep ftb ljuuz tbz
+%xibu ep ftb ljuuz tbz
+%ephhjf eph
+%ephhjf
+%opnj xibu epft uif ephhjf tbz
+%xibu ep ft uif ephhjf tbz
+%mjuumfcbczcjsejf
+%cbczcjsejf
+%zpv epoumj lf uibu pof
+%plbznpnnzublfui jtpvu
+%dpx
+%uif dpx tbz tnppnpp
+%xibu epft uif dpx tbz opnj
+
+%cagri@tablet:~/thesis/src/seg$ ./seg -m pred,none --combine=wmv
+%--quiet --pred-xmin=1 --pred-xmax=3 --pred-m=mi,h,rh,tp,rtp,sv,rsv -i
+%/tmp/inp.2 --print-prf
+%0,19, 0,36,0,5,50,14,5,26,14,
+%0.000000,-nan,-nan,0.090909,0.263158,0.135135,0.161290,0.263158,0.200000
+%ljuuz uibutsjhiuljuuz
+%ljuuztbzjubhbjompwfljuuz
+%xibut uibu
+%ljuuz
+%epzpvxbounpsfnjmlipofz
+%ljuuz ljuuz ephhjf
+%opnjxibu epftb ljuuz tbz
+%xibu epftb ljuuz tbz
+%ep hhjf eph
+%ephhjf
+%opnj xibu epft ui fephhjf tb z
+%xibu epft ui fephhjf tbz
+%mjuumfcbczcjse jf
+%cbczcjse jf
+%zpv epoumjlf uibu pof
+%plbznpnnzublfui jtpvu
+%dpx
+%uif dpx tbz tnppnpp
+%xibu epft uif dpx tbz opnj
+
+
+
+%kitty thats right kitty
+%kitty say it again love kitty
+%whats that
+%kitty
+%do you want more milk honey
+%kitty kitty doggie
+%nomi what does a kitty say
+%what does a kitty say
+%doggie dog
+%doggie
+%nomi what does the doggie say
+%what does the doggie say
+%little baby birdie
+%baby birdie
+%you dont like that one
+%okay mommy take this out
+%cow
+%the cow says moo moo
+%what does the cow say nomi
+
+%ljuuz uibut sjhiu ljuuz
+%ljuuz tbz ju bhbjo mpwf ljuuz
+%xibut uibu
+%ljuuz
+%ep zpv xbou npsf njml ipofz
+%ljuuz ljuuz ephhjf
+%opnj xibu epft b ljuuz tbz
+%xibu epft b ljuuz tbz
+%ephhjf eph
+%ephhjf
+%opnj xibu epft uif ephhjf tbz
+%xibu epft uif ephhjf tbz
+%mjuumf cbcz cjsejf
+%cbcz cjsejf
+%zpv epou mjlf uibu pof
+%plbz npnnz ublf uijt pvu
+%dpx
+%uif dpx tbzt npp npp
+%xibu epft uif dpx tbz opnj

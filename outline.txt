@@ -1,13 +1,104 @@
-* intro: what needs to be done for language acquistion
+* intro: what needs to be done for language acquisition
 * motivation: why do computational modeling?
 * segmentation: the problem 
 * what do we know about human segmentation?
 * cues
 * example segmentation: display of cues
 * the norm: language modeling or MDL
-* predictabilty: harris' method
-* predictability: other masures
+* predictability: Harris' method
+* predictability: other measures
 * how to do it? peaks in unpredictability
-* how well can we segment using predictabilty?
+* how well can we segment using predictability?
 * the example segmentation: mystery revealed.
 * conclusions and more
+
+-- title page
+
+This talk is about using computational methods for answering questions
+about human language acquisition. The particular area of acquisition
+we are interested in here is discovering words in continuous speech.
+
+-- the puzzle to solve
+
+I'd like to start the talk with a puzzle. What you see in this slide
+will serve as a demonstrative example of the input the children
+receive. Each line contains an English utterance, taken from actual
+speech directed to infants. The spaces are removed from the
+utterances. Because, it's an artifact of writing systems. Fluent
+speech does not have reliable boundary markers. Furthermore, the
+letters are transformed systematically to remove the advantage of
+knowledge English words. Children start with no lexical knowledge.
+Throughout this talk this text will serve as an approximation to the
+input children receive during language acquisition.
+
+Having bombarded with sequences like that, children need to ...  For
+this talk we will be interested in the very first problem: how can one
+able to discover words from an input like that? 
+
+-- computational models of language acquisition
+
+The methods I will discuss is modeling and simulating the problem
+computationally. Before going into real problem, one may ask: how can
+a computational model help understanding human cognitive skills.
+
+Many questions of language acquisition are difficult to investigate
+directly. Computational models can be used for providing insights into
+some of the questions, and as a method to test of the theories.
+
+An actual computational modeling forces precise theorizing. One can
+skip many rough edges and avoid describing difficult aspects that may
+matter while verbally describing a theory. However, one cannot build a
+computer simulation without explicit description of every step.
+
+Computational simulations are not the only way to formalize a theory.
+One can also use mathematical methods describe theories precisely on
+paper. However some aspects of the learning, such as the input
+children receive during acquisition, are not easy to formalize. A
+computational simulation allows us to skip modeling these aspects, but
+simply use the real data.
+
+-- segmentation: back to the puzzle
+
+Hoping that I convinced you that the computational modeling approach
+taken here is a way to study language acquisition, we will now take
+another look at our puzzle. Our puzzle will serve as a demonstrative
+example of what children hear during language acquisition. However, I
+should note that, this is simplified in many ways. The representation
+here assumes letters, in children's case phonemes, are already
+recognized. This is not necessarily the case in early stages of
+language acquisition. Furthermore, acoustic signal is much more varied
+and noisy than this example. Despite these simplifications, the
+solution to this puzzle will help us demonstrate the part of the
+segmentation problem we are going to discuss now. 
+
+The puzzle looks rather difficult. But, we are not that helpless.
+There are certain cues that can help.
+
+So far, I claimed that the acoustic noise and variation makes
+segmentation difficult. However, some properties of acoustic signal
+helps finding boundaries. These properties are of course, removed when
+we transcribe speech as in this example. Some examples of these
+acoustic properties are listed here. For example, even though pauses
+do not occur consistently at word boundaries, when they occur, they
+correlate with word (most of the time phrase) boundaries. Lexical
+stress also helps, for example, in English most two-syllable words
+follow strong-weak stress pattern. As a result, hearing a stressed
+syllable is a good predictor of a word beginning. Coarticulation is
+the phenomenon that the sounds at the boundary of words get fused, and
+pronounced differently. Allophonic alternations refers to the fact
+that some phonemes pronounced differently depending on their location
+in the word. As it is probably clear from the input on the left, we
+will not deal with these cues in this talk. But, acoustic cues are not
+the only cues that help for segmentation.
+
+If we know some words already, it helps spotting other words. For
+example if we new that this particular sequence, `uibu', here is a
+word, then we would expect boundaries before and after the word.
+
+If we look a little bit closer, we see some more regularities that may
+help. For example, if we look at the utterance boundaries, we see some
+reoccurring patterns. For example the pattern ...
+
+-- 
+
+

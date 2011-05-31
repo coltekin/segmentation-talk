@@ -1,16 +1,71 @@
 \begin{frame}
-\frametitle{Predictability based models: psychological relevance}
+\frametitle{Statistical regularities for segmentation}
 
-Children very early in life (8-months) seem to be sensitive to this
-type of information in the speech (Saffran, Aslin, Newport 1996)
 
-\begin{itemize}
-\item Infants are habituated to artificial speech segments built from a simple
-    vocabulary.
-\item They are tested with non-familiar patterns and familiar
-      patterns.
-\item On the basis of very short training 8-month-old infants attended
-      familiar examples significantly longer than the unfamiliar ones.  
-\end{itemize}
+\begin{center}
+\end{center}
+\begin{tikzpicture}[remember picture,overlay]
+\node[yshift=-2cm] at (current page.north) {%
+    \begin{minipage}{\textwidth}%
+    Children very early in life (8-months) seem to be sensitive to
+    statistical regularities between syllables (Saffran, Aslin,
+    Newport 1996)
+    \end{minipage}};
+\only<2>{
+\node[yshift=1.5cm] at (current page.center) 
+     {Training: \texttt{bidakupadotigolabubidakugolabupadoti\ldots}};
+}
+\only<3->{
+\node[yshift=1.5cm] at (current page.center) 
+     {Training: \texttt{\bl{bidaku}\rd{padoti}\grn{golabu}\bl{bidaku}\grn{golabu}\rd{padoti}\ldots}};
+\visible<4->{
+\node[yshift=1cm,xshift=-2.5cm,anchor=east] at (current page.center) 
+    {$TP(\bl{bi},\bl{da}) = 1$};
+\node[yshift=1cm,xshift=3cm,anchor=west] at (current page.center) 
+    {$TP(\grn{bu},\rd{pa}) = \frac{1}{3}$};
+\draw[dotted]  ($(current page.center) + (2.53,1.3)$)
+    rectangle
+               ($(current page.center) + (3.32,1.72)$);
+\draw[dotted]  ($(current page.center) + (-2.36,1.3)$)
+    rectangle
+               ($(current page.center) + (-3.15,1.72)$);
+}
+}
+\visible<5->{
+\draw[->,thick] ($(current page.center) + (0, 1)$) -- 
+                node[above,sloped] {test G1: words}
+                ($(current page.center) + (-3.5, -1)$);
+\draw[->,thick] ($(current page.center) + (0, 1)$) -- 
+                node[above,sloped] {test G2: non-words}
+                ($(current page.center) + (3.5, -1)$);
+\node[yshift=-1.3cm,xshift=-5mm,anchor=east] at (current page.center) 
+    {\texttt{\rd{padoti}\bl{bidaku}\grn{golabu}\rd{padoti} \ldots}};
+\node[yshift=-1.3cm,xshift=5mm,anchor=west] at (current page.center) 
+    {\texttt{pagolabidotikugobdalaubu \ldots}};
+}
+\visible<6->{
+\node[yshift=1.5cm] at (current page.south) {%
+%    \begin{minipage}{\textwidth}%
+\begin{beamercolorbox}[sep=0.5em,rounded=true]{whitebox}
+    Children showed preference towards the `words' that are used in
+    the training phase.
+    \end{beamercolorbox}};
+%    \end{minipage}};
+}
+\end{tikzpicture}
 
 \end{frame}
+
+%\begin{itemize}
+%\item Infants are habituated to artificial speech sequences built 
+%    from a simple vocabulary, such as `\emph{bidaku}', `\emph{padoti}',
+%    `\emph{golabu}'. Resulting in sequences like:
+%          `,
+%\item The syllable transition probabilities within the words were 1.
+%      That is, wthin the words the next syllable was deterministic. 
+%\item The syllable transition probabilities between the words were 1/3. 
+%\item After habituation, children are tested with either stequences of `words', 
+%    or random sequences formed by the same syllables.
+%\item On the basis of very short training 8-month-old infants attended
+%      familiar examples significantly longer than the unfamiliar ones.  
+%\end{itemize}
